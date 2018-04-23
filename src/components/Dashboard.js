@@ -1,35 +1,38 @@
 import React, { Component } from "react";
-import { Link,Route } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import { connect } from 'react-redux';
 import Navbar from "./../modules/navbar";
 import Sidebar from "./../modules/sidebar";
 import DashboardPage from "./DashboardPage";
+import LangOne from "./LangOne";
 
 class Dashboard extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <div class="ui four column grid">
+        {/* <div className="ui four column grid">
                     <Navbar />
                 </div>
-                <div class="ui four column grid">
-                    <div class="row">
-                        <div class="two wide column">2</div>
-                        <div class="fourteen wide column">14</div>
+                <div className="ui four column grid">
+                    <div className="row">
+                        <div className="two wide column">2</div>
+                        <div className="fourteen wide column">14</div>
                     </div>
                 </div> */}
-        <div class="ui four column grid">
-          <div class="row">
-            <div class="column" style={{ height: 50 }}>
+        <div className="ui four column grid">
+          <div className="row">
+            <div className="column" style={{ height: 50 }}>
               {" "}
               <Navbar />
             </div>
           </div>
-          <div class="row" style={{ height: 800 }}>
-            <div class="three wide column">
+          <div className="row" style={{ height: 800 }}>
+            <div className="three wide column">
               <Sidebar />
             </div>
-            <div class="thirteen wide column">
-              <Route exact path="/" component={DashboardPage} />
+            <div className="thirteen wide column">
+              <Route exact path="/dashboard" component={DashboardPage} />
+              <Route exact path="/getSinhalaText" component={LangOne} />
             </div>
           </div>
         </div>
@@ -41,4 +44,10 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+function mapStateToProps(state) {
+    return {
+    };
+  }
+  
+  export default connect(mapStateToProps, null)(Dashboard);
+
