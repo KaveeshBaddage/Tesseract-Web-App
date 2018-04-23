@@ -31,9 +31,9 @@ store.subscribe(() => {
 
 ReactDOM.render(
     <Provider store={store}>
-    <HashRouter > 
-                <Route path="/" component={App} />        
-    </HashRouter>
+
+                <App />        
+
     </Provider>,
      document.getElementById('root'));
 registerServiceWorker();
