@@ -4,16 +4,6 @@ import { Route,Link, withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
 import {
-    Container,
-    Header,
-    Image,
-    Grid,
-    Card,
-    Icon,
-    Form,
-    Button,
-    Divider,
-    Input, Message
 } from 'semantic-ui-react';
 import { loginActions } from './../actions';
 
@@ -31,19 +21,19 @@ class Navbar extends Component {
         this.props.logout();   
     }
 
-    componentDidUpdate() {
-        if (this.props.isAuthenticated==false) {
-            console.log("Redirect to login");
-            this.props.history.push('/login');
-        }
-    }
+    // componentDidUpdate() {
+    //     if (this.props.isAuthenticated==false) {
+    //         console.log("Redirect to login");
+    //         this.props.history.push('/login');
+    //     }
+    // }
 
-    componentDidMount() {
-        if (this.props.isAuthenticated==false) {
-            console.log("Redirect to login");
-            this.props.history.push('/login');
-        }
-    }
+    // componentDidMount() {
+    //     if (this.props.isAuthenticated==false) {
+    //         console.log("Redirect to login");
+    //         this.props.history.push('/login');
+    //     }
+    // }
 
     render() {
         return (

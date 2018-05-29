@@ -9,15 +9,15 @@ class Sidebar extends React.Component {
           <div className="column" id="sidebar">
             <div className="ui secondary vertical fluid menu">
               <Link to={"/dashboard"}>
-                <a className="item">Dashboard</a>{" "}
+                <span className="item">Dashboard</span>{" "}
               </Link>
               <Link to={"/getSinhalaText"}>
                 {" "}
-                <a className="item">Get Sinhala Text</a>
+                <span className="item">Get Sinhala Text</span>
               </Link>
               <Link to={"/getEnglishText"}>
                 {" "}
-                <a className="item">Get English Text</a>
+                <span className="item">Get English Text</span>
               </Link>
             </div>
           </div>

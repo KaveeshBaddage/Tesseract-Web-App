@@ -1,21 +1,20 @@
 import axios from 'axios';
 
 // TODO: Replace this with actual JWT token from Keycloak
-const id_token = "secret";
 
 // Create axios instance for api calls
 var instance = axios.create({
     baseURL: '',
-    timeout: 5000,
+    timeout: 10000,
     headers: { 'Authorization': 'Bearer ' + sessionStorage.jwt }
 });
 
 export const Get = (route, data) => (
-    instance.get(route, data == {} ? null : JSON.stringify(data))
+    instance.get(route, data === {} ? null : JSON.stringify(data))
 )
-
-export const Post = (route, data) => (
-    instance.post(route, JSON.stringify(data))
+export const Post = (route,data,config) => (
+    console.log("data come to post method is",data),
+    instance.post(route, data,config)
 )
 
 export const Put = (route, data) => (

@@ -31,7 +31,7 @@ class Dashboard extends Component {
               <Sidebar />
             </div>
             <div className="thirteen wide column">
-              <Route exact path="/dashboard" component={DashboardPage} />
+              <Route exact path="/" component={DashboardPage} />
               <Route exact path="/getSinhalaText" component={LangOne} />
             </div>
           </div>
