@@ -5,6 +5,7 @@ import Navbar from "./../modules/navbar";
 import Sidebar from "./../modules/sidebar";
 import DashboardPage from "./DashboardPage";
 import LangOne from "./LangOne";
+import LangTwo from "./LangTwo";
 
 class Dashboard extends Component {
   render() {
@@ -33,6 +34,7 @@ class Dashboard extends Component {
             <div className="thirteen wide column">
               <Route exact path="/" component={DashboardPage} />
               <Route exact path="/getSinhalaText" component={LangOne} />
+              <Route exact path="/getEnglishText" component={LangTwo} />
             </div>
           </div>
         </div>
