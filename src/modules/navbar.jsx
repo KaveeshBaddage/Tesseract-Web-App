@@ -40,7 +40,7 @@ class Navbar extends Component {
             <div className="ui inverted huge borderless fixed fluid menu" style={{height:50}} id="navbar">
                 <a className="header item">Tesseract OCR</a>
                 <div className="right menu">
-                    <a className="item" onClick={this.logoutUser} >Sign Out </a>
+                    {/* <a className="item" onClick={this.logoutUser} >Sign Out </a> */}
                          
                 </div>
             </div>
