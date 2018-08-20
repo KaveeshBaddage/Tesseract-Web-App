@@ -20,7 +20,7 @@ import {
   Loader
 } from "semantic-ui-react";
 
-class LangOne extends Component {
+class LangTwo extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,6 +30,10 @@ class LangOne extends Component {
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
     this.fileUpload = this.fileUpload.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.textActions.clearText();
   }
 
   onFormSubmit(e) {
@@ -125,5 +129,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(LangOne)
+  connect(mapStateToProps, mapDispatchToProps)(LangTwo)
 );
