@@ -21,8 +21,11 @@ export default handleActions({
         return { ...state, data: payload, error: false, requestSuccess: true }
     },
     [types.TEXT_FAILED]: (state, { payload }) => {
-        return { ...state, data: [], error: { ...payload } }
+        return { ...state, data: null, error: { ...payload } }
     },
+    [types.TEXT_CLEAR]: (state, { payload }) => (
+        { ...state,data:null }
+    ),
     [types.TEXT_OP_CLEAR]: (state, { payload }) => (
         { ...state, requestSuccess: false }
     ),
