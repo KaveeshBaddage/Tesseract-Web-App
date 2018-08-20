@@ -32,6 +32,10 @@ class LangOne extends Component {
     this.fileUpload = this.fileUpload.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.textActions.clearText();
+  }
+
   onFormSubmit(e) {
     e.preventDefault(); // Stop form submit
     this.props.textActions.queryStart();
@@ -47,7 +51,7 @@ class LangOne extends Component {
     this.setState({ file: e.target.files[0] });
   }
   fileUpload(file) {
-    const url = "http://localhost:8080/getEnglishText";
+    const url = "http://localhost:8080/getSinhalaText";
     const formData = new FormData();
     formData.append("file", file);
     const config = {
