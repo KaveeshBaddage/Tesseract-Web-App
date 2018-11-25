@@ -21,9 +21,9 @@ const getText = createLogic({
     console.log("TEXT TYPE IS", action.payload.textType);
     console.log("Data is", action.payload.data);
     if (action.payload.textType == "Sinhala") {
-      url = endPoints.GET_SINHALA_TEXT;
+      url = endPoints.GET_EXISTING_DATA_SET;
     } else {
-      url = endPoints.GET_ENGLISH_TEXT;
+      url = endPoints.CREATE_NEW_DATA_SET;
     }
 
     var formData = new FormData();
