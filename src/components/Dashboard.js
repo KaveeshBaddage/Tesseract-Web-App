@@ -33,8 +33,8 @@ class Dashboard extends Component {
             </div>
             <div className="thirteen wide column">
               <Route exact path="/" component={DashboardPage} />
-              <Route exact path="/getSinhalaText" component={LangOne} />
-              <Route exact path="/getEnglishText" component={LangTwo} />
+              <Route exact path="/getExistingDataSet" component={LangOne} />
+              <Route exact path="/createNewDataSet" component={LangTwo} />
             </div>
           </div>
         </div>
