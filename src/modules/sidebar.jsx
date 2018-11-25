@@ -10,24 +10,24 @@ class Sidebar extends React.Component {
           <div className="column" id="sidebar">
             <div className="ui secondary vertical fluid menu">
               <Header as="h1" block style={{ width: "95%" }}>
-               Tesseract OCR
+               BlockSci Analysis
               </Header>
               <List selection verticalAlign="middle">
                 <List.Item>
                   <Link to={"/"}>
-                    <span className="item">Dashboard</span>{" "}
+                    <span className="item">Guidelines</span>{" "}
                   </Link>
                 </List.Item>
                 <List.Item>
-                  <Link to={"/getSinhalaText"}>
+                  <Link to={"/getExistingDataSet"}>
                     {" "}
-                    <span className="item">Get Sinhala Text</span>
+                    <span className="item">Get Existing Data Set</span>
                   </Link>
                 </List.Item>
                 <List.Item>
-                  <Link to={"/getEnglishText"}>
+                  <Link to={"/createNewDataSet"}>
                     {" "}
-                    <span className="item">Get English Text</span>
+                    <span className="item">Create New Data Set</span>
                   </Link>
                 </List.Item>
               </List>
