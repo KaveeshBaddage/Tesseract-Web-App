@@ -9,7 +9,7 @@ class DashboardPage extends Component {
           <div className="jumbotron">
             <Segment color="grey" style={{ width: "95%"}} textAlign="center">
               <Header as="h1" block style={{ width: "95%" }}>
-                Welcome to the Tesseract OCR
+                Welcome to the BlockSci Analysis Tool
               </Header>
               <p>
                 {" "}
