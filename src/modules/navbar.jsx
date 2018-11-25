@@ -38,7 +38,7 @@ class Navbar extends Component {
     render() {
         return (
             <div className="ui inverted huge borderless fixed fluid menu" style={{height:50}} id="navbar">
-                <a className="header item">Tesseract OCR</a>
+                <a className="header item">BlockSci Analysis</a>
                 <div className="right menu">
                     {/* <a className="item" onClick={this.logoutUser} >Sign Out </a> */}
                          
