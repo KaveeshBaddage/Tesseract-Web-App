@@ -75,16 +75,16 @@ class LangOne extends Component {
         <div>
           <Header as="h1" block style={{ width: "95%" }}>
             <Icon name="settings" />
-            Tesseract OCR To Get Sinhala Text
+            BlockSci Analysis To Get Existing Data Set
           </Header>
           <Divider horizontal hidden />
           <Segment stacked style={{ width: "95%" }}>
             <Header as="h3">
               <Icon name="question circle outline" />
-              Steps to extract text from JPEG/TIFF/BMP files
+              Steps to get existing data set
             </Header>
             <List as="ol">
-              <List.Item as="li">Upload the file using following section </List.Item>
+              <List.Item as="li">Upload the CSV file using following section </List.Item>
               <List.Item as="li">Click <b>Get Text</b> Button </List.Item>
               <List.Item as="li">Extracted text will be shown below the file upload section</List.Item>
             </List>
@@ -93,7 +93,7 @@ class LangOne extends Component {
             <Form onSubmit={this.onFormSubmit}>
               <Header as="h3">
                 <Icon name="upload" />
-                Upload File
+                Insert Tainted Address/Addresses
               </Header>
               <Input
                 type="file"
@@ -102,7 +102,7 @@ class LangOne extends Component {
               />
               <br />
               <Divider horizontal hidden />
-              <Button type="submit">Get Text</Button>
+              <Button type="submit">Upload CSV File </Button>
             </Form>
           </Segment>
         </div>
@@ -110,6 +110,22 @@ class LangOne extends Component {
       {loadingMsg}
         <div><pre>{this.props.text}</pre></div>
         </Segment>
+        <Segment stacked style={{ width: "95%" }}>
+            <Form onSubmit={this.onFormSubmit}>
+              <Header as="h3">
+                <Icon name="delete" />
+                Delete Tainted Address
+              </Header>
+              <Input
+                type="file"
+                placeholder="Hash Value"
+                onChange={this.onChange}
+              />
+              <br />
+              <Divider horizontal hidden />
+              <Button type="submit">Delete Tainted Address</Button>
+            </Form>
+          </Segment>
       </React.Fragment>
     );
   }
